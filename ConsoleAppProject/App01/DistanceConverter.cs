@@ -24,21 +24,15 @@ namespace ConsoleAppProject.App01
         /// This offers
         public void MilesToFeet()
         {
-            OutputHeading();
-            Console.WriteLine("Converting Miles To Feet");
-            Console.WriteLine();
-
-            InputMiles ();
+            OutputHeading("Converting Miles To Feet");
+            InputMiles();
             CalculateFeet();
             OutputFeet();
         }
 
         public void FeetToMiles()
         {
-            OutputHeading();
-            Console.WriteLine("Converting Feet To Miles");
-            Console.WriteLine();
-
+            OutputHeading("Converting Feet To Miles");
             InputFeet();
             CalculateMiles();
             OutputMiles();
@@ -46,10 +40,7 @@ namespace ConsoleAppProject.App01
 
         public void MilesToMetres()
         {
-            OutputHeading();
-            Console.WriteLine("Converting Miles To Metres");
-            Console.WriteLine();
-
+            OutputHeading("Converting Miles To Metres");
             InputMiles();
             CalculateMetres();
             OutputMetres();
@@ -98,26 +89,29 @@ namespace ConsoleAppProject.App01
         /// This offers
         private void OutputFeet()
         {
-            Console.WriteLine(miles + "miles is " + feet + " Feet!" );
+            Console.WriteLine(miles + " miles is " + feet + " Feet! " );
         }
 
         private void OutputMiles()
         {
-            Console.WriteLine(feet + "feet is " + miles + " miles!");
+            Console.WriteLine(feet + " feet is " + miles + " miles! ");
         }
         private void OutputMetres()
         {
-            Console.WriteLine(miles + "miles is " + metres + " metres!");
+            Console.WriteLine(miles + " miles is " + metres + " metres! ");
         }
 
 
-        private void OutputHeading()
+        private void OutputHeading(String promt)
         {
             Console.WriteLine("\n =================================================");
             Console.WriteLine("                                                  ");
             Console.WriteLine("               Distance Coverter!                 ");
             Console.WriteLine("                                                  ");
             Console.WriteLine(" =================================================");
+
+            Console.WriteLine(promt);
+            Console.WriteLine();
         }
     }
 }
