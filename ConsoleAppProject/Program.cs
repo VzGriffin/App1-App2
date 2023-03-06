@@ -11,7 +11,7 @@ namespace ConsoleAppProject
     /// to start App01 to App05 for CO453 CW1
     /// 
     /// This Project has been modified by:
-    /// Derek Peacock 05/02/2022
+    /// Myles Griffiths 05/03/2023
     /// </summary>
     public static class Program
     {
@@ -27,6 +27,9 @@ namespace ConsoleAppProject
 
             DistanceConverter converter = new DistanceConverter();
             //converter.run();
+
+            DistanceConverter converter = new DistanceConverter();
+            converter.Run();
         }
     }
 }
