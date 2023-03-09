@@ -7,7 +7,7 @@ namespace ConsoleAppProject.App01
     /// Please describe the main features of this App
     /// </summary>
     /// <author>
-    /// Myles version 0.1
+    /// Myles version 0.6
     /// </author>
     public class DistanceConverter
     {
@@ -25,48 +25,42 @@ namespace ConsoleAppProject.App01
         public void MilesToFeet()
         {
             OutputHeading("Converting Miles To Feet");
-            InputMiles();
+
+            miles = InputDistance("Please enther number if miles > ");
+            
             CalculateFeet();
-            OutputFeet();
+
+            OutputDistance(miles, nameof(miles), feet, nameof(feet));
         }
 
         public void FeetToMiles()
         {
             OutputHeading("Converting Feet To Miles");
-            InputFeet();
+
+            feet = InputDistance("Please enther number if feet > ");
+
             CalculateMiles();
-            OutputMiles();
+
+            OutputDistance(feet, nameof(feet), miles, nameof(miles));
         }
 
         public void MilesToMetres()
         {
             OutputHeading("Converting Miles To Metres");
-            InputMiles();
+
+            metres = InputDistance("Please enther number if metres > ");
+
             CalculateMetres();
-            OutputMetres();
+
+            OutputDistance(miles, nameof(miles), metres, nameof(metres));
         }
 
         /// This offers
-        private void InputMiles()
+        private double InputDistance(string prompt)
         {
-            Console.Write("Please enter the number of Miles");
+            Console.Write(prompt);
             string value = Console.ReadLine();
-            miles = Convert.ToDouble(value);
-        }
-
-        private void InputFeet()
-        {
-            Console.Write("Please enter the number of Feet");
-            string value = Console.ReadLine();
-            feet = Convert.ToDouble(value);
-        }
-
-
-        private void InputMetres()
-        {
-            Console.Write("Please enter the number of Metres");
-            string value = Console.ReadLine();
-            metres = Convert.ToDouble(value);
+            return Convert.ToDouble(value);
         }
 
 
@@ -87,26 +81,19 @@ namespace ConsoleAppProject.App01
         }
 
         /// This offers
-        private void OutputFeet()
+        private void OutputDistance(
+            double formDistance, string fromUnit,
+            double toDistance, string toUnit)
         {
-            Console.WriteLine(miles + " miles is " + feet + " Feet! " );
+            Console.WriteLine($" {formDistance}  {fromUnit} is {toDistance} {toUnit}!");
         }
-
-        private void OutputMiles()
-        {
-            Console.WriteLine(feet + " feet is " + miles + " miles! ");
-        }
-        private void OutputMetres()
-        {
-            Console.WriteLine(miles + " miles is " + metres + " metres! ");
-        }
-
 
         private void OutputHeading(String promt)
         {
             Console.WriteLine("\n =================================================");
             Console.WriteLine("                                                  ");
             Console.WriteLine("               Distance Coverter!                 ");
+            Console.WriteLine("               By Myles Griffiths                 ");
             Console.WriteLine("                                                  ");
             Console.WriteLine(" =================================================");
 
