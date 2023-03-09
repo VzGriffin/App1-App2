@@ -47,7 +47,7 @@ namespace ConsoleAppProject.App01
             toUnit = SelecUnit(" Select the to Distance unit > ");
 
             Console.WriteLine($"\n Converting {fromUnit} to {toUnit}");
-            fromDistance = InputDistance($"Enther number of {fromUnit} > ");
+            fromDistance = InputDistance($" Enther number of {fromUnit} > ");
             
             CalculateDistance();
 
@@ -120,8 +120,8 @@ namespace ConsoleAppProject.App01
 
         private void OutputDistance()
         {
-            Console.WriteLine($" {fromDistance}  {fromUnit}" +
-                $" {toDistance}  {toUnit}!");
+            Console.WriteLine($"\n {fromDistance}  {fromUnit}" +
+                $" {toDistance}  {toUnit}!\n");
         }
 
 
