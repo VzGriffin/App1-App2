@@ -12,7 +12,7 @@ namespace ConsoleAppProject.App03
     public class StudentGrades
     {
 
-        //
+        /
 
         public const int LowestMark = 0;
         public const int LowestGradeD = 40;
