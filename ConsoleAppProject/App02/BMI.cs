@@ -11,6 +11,7 @@ namespace ConsoleAppProject.App02
     /// </author>
     public class BMI
     {
+
         public void CalculateIndex()
         {
             Console.WriteLine("\n================================================");
