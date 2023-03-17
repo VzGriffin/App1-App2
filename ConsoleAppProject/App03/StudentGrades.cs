@@ -12,7 +12,7 @@ namespace ConsoleAppProject.App03
     public class StudentGrades
     {
 
-        /
+        //Grade bounderies in Order
 
         public const int LowestMark = 0;
         public const int LowestGradeD = 40;
@@ -21,7 +21,7 @@ namespace ConsoleAppProject.App03
         public const int LowsstGradeA = 70;
         public const int HighestMark = 100;
 
-        //
+        // Proprties
         public string[] Students { get; set; }
 
         public int[] Marks { get; set; }
